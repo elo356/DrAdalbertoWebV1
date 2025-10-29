@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Adalberto Echevarría Feliciano — Medicina Primaria | Añasco, PR</title>
+  <meta name="description" content="Clínica del Dr. Adalberto Echevarría Feliciano — medicina primaria y preventiva, cirugía menor, telemedicina, certificados y control de peso. Aceptamos Plan Vital. Golden Plaza #3, Añasco." />
+  <meta name="theme-color" content="#0b60a6" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dr. Adalberto Echevarría Feliciano — Medicina Primaria" />
+  <meta property="og:description" content="Atención primaria y preventiva en Añasco, Puerto Rico. Telemedicina, visitas a domicilio, certificados de salud y más." />
+  <meta property="og:type" content="website" />
+  <!-- Tailwind CDN (rápido para prototipado) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS (animaciones al scrollear) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Swiper (carrusel) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- Icons -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --brand: #0b60a6; --accent: #45c5b6; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    /* Simple focus-visible */
+    :focus { outline: none; box-shadow: 0 0 0 3px rgba(11,96,166,0.16); border-radius: 6px; }
+    /* Floating WhatsApp button */
+    .whatsapp-float { position: fixed; right: 18px; bottom: 18px; z-index: 60; }
+
+      .carousel {
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      overflow-x: hidden;
+    }
+    .carousel-item {
+      scroll-snap-align: center;
+      flex: 0 0 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dr. Adalberto Echevarría Feliciano",
+    "description": "Medicina primaria y preventiva, cirugía menor, licencias, telemedicina, visitas a domicilio, certificados de salud y control de peso. Aceptamos Plan Vital.",
+    "url": "https://tusitio.com",
+    "telephone": "+19396996336",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Golden Plaza #3, Carretera 402 KM 2.1, Bo. Marías",
+      "addressLocality": "Añasco",
+      "addressRegion": "PR",
+      "postalCode": ""
+    },
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "image": "https://tusitio.com/hero.jpg"
+  }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Top bar -->
+  <div class="bg-gradient-to-r from-sky-700 to-cyan-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-sm">
+      <div class="flex items-center gap-4">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.2 0L21 8M5 19h14"/></svg>
+        <span>Atención primaria • Telemedicina • Visitas a domicilio</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+19396996336" class="flex items-center gap-2 hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v4l6 2 2 6 4-1 3 3V5z"/></svg>
+          +1 (939) 699-6336
+        </a>
+        <a href="#contacto" class="bg-white text-sky-700 rounded-full px-3 py-1 text-xs font-semibold">Pedir cita</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar / Hero -->
+  <header class="bg-white sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="doctor-logo.png" alt="" class="h-12 w-12 object-cover rounded-md shadow-sm" />
+        <div>
+          <h1 class="text-lg font-bold leading-tight">Dr. Adalberto Echevarría</h1>
+          <p class="text-xs text-gray-500">Medicina primaria • Añasco, Puerto Rico</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#servicios" class="hover:text-sky-600">Servicios</a>
+        <a href="#planes" class="hover:text-sky-600">Planes</a>
+        <a href="#equipo" class="hover:text-sky-600">Equipo</a>
+        <a href="#testimonios" class="hover:text-sky-600">Testimonios</a>
+        <a href="#foro" class="hover:text-sky-600">Foro</a>
+        <a href="#contacto" class="hover:text-sky-600">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://www.facebook.com/" target="_blank" class="hidden md:inline-flex items-center gap-2 text-gray-600 hover:text-sky-600">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.073C22 6.504 17.523 2 12 2S2 6.504 2 12.073C2 17.092 5.657 21.128 10.438 22v-7.03H7.898v-2.897h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.468h-1.26c-1.24 0-1.626.771-1.626 1.562v1.875h2.773l-.443 2.897h-2.33V22C18.343 21.128 22 17.091 22 12.073z"/></svg>
+        </a>
+        <a href="#contacto" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg shadow">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h18M9 3v2m6-2v2M3 19h18M7 9v6"/></svg>
+          Agendar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pt-8 pb-24">
+    <!-- Hero principal -->
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div data-aos="fade-right" data-aos-duration="800">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-sky-800 leading-tight">
+          Atención médica cercana y profesional en Añasco
+        </h2>
+        <p class="mt-4 text-gray-600 max-w-xl">
+          Medicina primaria y preventiva, cirugía menor, telemedicina, certificados de salud, licencias de conducir y matrimonio, visitas al hogar y planes de control de peso — con un enfoque humano y evidencia médica.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#contacto" class="inline-flex items-center gap-2 bg-sky-600 text-white px-4 py-2 rounded-lg shadow hover:bg-sky-700">
+            Agendar cita
+          </a>
+          <a href="#servicios" class="inline-flex items-center gap-2 border border-sky-600 text-sky-600 px-4 py-2 rounded-lg hover:bg-sky-50">
+            Ver servicios
+          </a>
+        </div>
+
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700">
+          <li class="flex items-start gap-2"><strong class="text-sky-700">✓</strong> Telemedicina disponible</li>
+          <li class="flex items-start gap-2"><strong class="text-sky-700">✓</strong> Visitas a domicilio</li>
+          <li class="flex items-start gap-2"><strong class="text-sky-700">✓</strong> Aceptamos Plan Vital</li>
+          <li class="flex items-start gap-2"><strong class="text-sky-700">✓</strong> Certificados & licencias</li>
+        </ul>
+      </div>
+
+      <div data-aos="zoom-in" data-aos-duration="800" class="relative">
+        <!-- Replace hero.jpg with a real photo -->
+        <img src="images/oficina18.jpg" alt="Consultorio del Dr. Echevarría" class="rounded-2xl shadow-xl w-full object-cover max-h-96" />
+        <div class="absolute bottom-4 left-4 bg-white/90 rounded-lg p-4 shadow-md">
+          <p class="text-xs text-gray-500">Ubicación</p>
+          <p class="font-semibold">Golden Plaza #3, Carretera 402 KM 2.1, Bo. Marías, Añasco</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="mt-16">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold text-sky-800">Servicios</h3>
+        <p class="text-sm text-gray-500">Atención integral y preventiva</p>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article data-aos="fade-up" class="bg-white rounded-xl p-6 shadow">
+          <h4 class="font-semibold text-lg text-sky-700">Medicina primaria y preventiva</h4>
+          <p class="mt-2 text-sm text-gray-600">Evaluaciones generales, manejo de condiciones crónicas, chequeos preventivos y orientación en salud.</p>
+          <a href="#contacto" class="mt-4 inline-block text-sky-600 text-sm font-medium">Pedir cita →</a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-xl p-6 shadow">
+          <h4 class="font-semibold text-lg text-sky-700">Cirugía menor</h4>
+          <p class="mt-2 text-sm text-gray-600">Procedimientos ambulatorios seguros y con anestesia local: extracción de lesiones, suturas simples y más.</p>
+          <a href="#contacto" class="mt-4 inline-block text-sky-600 text-sm font-medium">Más info →</a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="160" class="bg-white rounded-xl p-6 shadow">
+          <h4 class="font-semibold text-lg text-sky-700">Telemedicina</h4>
+          <p class="mt-2 text-sm text-gray-600">Consulta por videollamada para seguimiento o primera orientación (según caso clínico).</p>
+          <a href="#contacto" class="mt-4 inline-block text-sky-600 text-sm font-medium">Agendar →</a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="240" class="bg-white rounded-xl p-6 shadow">
+          <h4 class="font-semibold text-lg text-sky-700">Certificados y licencias</h4>
+          <p class="mt-2 text-sm text-gray-600">Certificados de salud, certificados para licencias de conducir, licencias matrimoniales y otros documentos médicos.</p>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="320" class="bg-white rounded-xl p-6 shadow">
+          <h4 class="font-semibold text-lg text-sky-700">Visita al hogar</h4>
+          <p class="mt-2 text-sm text-gray-600">Atención en el domicilio para pacientes con movilidad reducida o que lo requieran.</p>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="400" class="bg-white rounded-xl p-6 shadow">
+          <h4 class="font-semibold text-lg text-sky-700">Control de peso</h4>
+          <p class="mt-2 text-sm text-gray-600">Planes personalizados, orientación nutricional y seguimiento médico.</p>
+        </article>
+      </div>
+    </section>
+ <section id="horarios" class="mt-16 bg-white rounded-2xl p-8 shadow">
+      <h3 class="text-2xl font-bold text-sky-800 mb-4">🕒 Horarios de Atención</h3>
+      <p class="text-gray-600 mb-4">Visítanos en nuestros horarios regulares. También contamos con teleconsultas por cita previa.</p>
+      <ul class="text-gray-700 space-y-2 text-sm">
+        <li><strong>Lunes a Jueves:</strong> 8:00 am — 4:00 pm</li>
+        <li><strong>Viernes:</strong> 8:00 am — 3:00 pm</li>
+        <li><strong>Sábado:</strong> 8:00 am — 12:00 pm</li>
+      </ul>
+    </section>
+
+     <!-- PLANES Y MÉTODOS DE PAGO -->
+    <section id="planes" class="mt-16 bg-gradient-to-b from-white to-sky-50 p-8 rounded-2xl">
+      <h3 class="text-2xl font-bold text-sky-800 mb-4">💳 Métodos de Pago</h3>
+      <p class="text-gray-600 mb-6">Aceptamos la mayoría de los planes médicos, incluyendo Plan Vital. Consulte si su plan está cubierto.</p>
+      <div class="grid sm:grid-cols-3 gap-6 text-center text-sm">
+        <div class="bg-white rounded-lg p-6 shadow">
+          <h4 class="font-semibold text-sky-700 mb-2">Efectivo</h4>
+          <p class="text-gray-600">Pagos directos en oficina.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow">
+          <h4 class="font-semibold text-sky-700 mb-2">Transferencias</h4>
+          <p class="text-gray-600">ATH Móvil y Zelle disponibles.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow">
+          <h4 class="font-semibold text-sky-700 mb-2">Tarjetas</h4>
+          <p class="text-gray-600">Visa, MasterCard, American Express y Discover.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Equipo -->
+    <section id="equipo" class="mt-14">
+      <h3 class="text-2xl font-bold text-sky-800">Nuestro equipo</h3>
+      <p class="text-sm text-gray-500 mt-2">Profesionales dedicados al cuidado del paciente.</p>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow" data-aos="fade-up">
+          <img src="dr-adalberto.jpg" alt="Dr. Adalberto Echevarría" class="w-28 h-28 rounded-full mx-auto object-cover" />
+          <h4 class="text-center mt-4 font-semibold">Dr. Adalberto Echevarría</h4>
+          <p class="text-center text-sm text-gray-600">Médico general • Fundador</p>
+          <p class="mt-3 text-sm text-gray-600">Experiencia en atención primaria y cirugía menor con enfoque en prevención.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow" data-aos="fade-up" data-aos-delay="80">
+          <img src="enfermera.jpg" alt="Enfermera" class="w-28 h-28 rounded-full mx-auto object-cover" />
+          <h4 class="text-center mt-4 font-semibold">Name</h4>
+          <p class="text-center text-sm text-gray-600">trabajo</p>
+          <p class="mt-3 text-sm text-gray-600">funcion</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow" data-aos="fade-up" data-aos-delay="160">
+          <img src="recepcionista.jpg" alt="Recepcionista" class="w-28 h-28 rounded-full mx-auto object-cover" />
+          <h4 class="text-center mt-4 font-semibold">Name</h4>
+          <p class="text-center text-sm text-gray-600">trabajo</p>
+          <p class="mt-3 text-sm text-gray-600">funcion</p>
+        </div>
+      </div>
+    </section>
+
+       
+
+   
+
+    <!-- Testimonios (Swiper) -->
+    <section id="testimonios" class="mt-14">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold text-sky-800">Testimonios</h3>
+        <p class="text-sm text-gray-500">Lo que dicen nuestros pacientes</p>
+      </div>
+
+      <div class="mt-6">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-700">"Excelente atención, muy humano y profesional. La teleconsulta fue clara y útil."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="avatar1.jpg" alt="Paciente 1" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">María G.</p>
+                    <p class="text-xs text-gray-500">Paciente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-700">"Profesionales y con mucha paciencia. Me ayudaron con mi control de peso."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="avatar2.jpg" alt="Paciente 2" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Carlos R.</p>
+                    <p class="text-xs text-gray-500">Paciente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-700">"Me hicieron el certificado que necesitaba el mismo día. Súper rápido."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="avatar3.jpg" alt="Paciente 3" class="w-10 h-10 rounded-full object-cover" />
+                  <div>
+                    <p class="font-semibold text-sm">Ana P.</p>
+                    <p class="text-xs text-gray-500">Paciente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="swiper-button-next !text-sky-600"></div>
+          <div class="swiper-button-prev !text-sky-600"></div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Galería del Consultorio -->
+<!-- Galería tipo carrusel -->
+<section id="galeria" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-semibold text-center text-blue-900 mb-10">
+      Nuestras Instalaciones
+    </h3>
+    <p class="text-center max-w-2xl mx-auto mb-12 text-gray-600">
+      Contamos con un espacio cómodo, moderno y seguro diseñado para tu bienestar.
+      Conoce un poco más sobre nuestra clínica y áreas de servicio.
+    </p>
+
+    <!-- Swiper Carrusel (contenedor vacío: se llenará por JS) -->
+    <div class="swiper galeriaSwiper">
+      <div class="swiper-wrapper" id="galeriaWrapper"><!-- slides inyectadas aquí --></div>
+
+      <!-- Controles -->
+      <div class="swiper-pagination mt-4"></div>
+      <div class="swiper-button-next !text-sky-600"></div>
+      <div class="swiper-button-prev !text-sky-600"></div>
+    </div>
+  </div>
+
+  <script>
+    (async function(){
+      const wrapper = document.getElementById('galeriaWrapper');
+      const dirCandidates = ['images/Doctorpics/','images/'];
+      const exts = ['jpg','jpeg','png','webp','gif'];
+      const bases = ['oficina','consultorio','imagen','img','photo','picture','foto','room','office'];
+
+      function existsImage(url){
+        return new Promise(resolve => {
+          const i = new Image();
+          i.onload = () => resolve(true);
+          i.onerror = () => resolve(false);
+          i.src = url + '?_=' + Date.now();
+        });
+      }
+
+      // Intenta leer list.json en las carpetas primero (opcional)
+      async function tryListJson() {
+        for (const d of dirCandidates) {
+          try {
+            const res = await fetch(d + 'list.json');
+            if (!res.ok) continue;
+            const arr = await res.json();
+            if (Array.isArray(arr) && arr.length) return arr.map(p => (p.startsWith('http')||p.startsWith('/')) ? p : d + p);
+          } catch (e) { /* no importa */ }
+        }
+        return null;
+      }
+
+      // Probar patrones comunes
+      async function probePatterns() {
+        const found = [];
+        for (const d of dirCandidates) {
+          for (const base of bases) {
+            for (let i = 1; i <= 30; i++) {
+              for (const ext of exts) {
+                const url = `${d}${base}${i}.${ext}`;
+                // await en loop intencional (sencillo y fiable)
+                // eslint-disable-next-line no-await-in-loop
+                if (await existsImage(url)) {
+                  found.push(url);
+                  break;
+                }
+              }
+            }
+            if (found.length) break;
+          }
+          if (found.length) break;
+        }
+        return Array.from(new Set(found));
+      }
+
+      // Obtener lista de imágenes
+      let images = await tryListJson();
+      if (!images || !images.length) images = await probePatterns();
+
+      if (!images || !images.length) {
+        wrapper.innerHTML = '<p class="text-center text-gray-500">No se encontraron imágenes en /images/. Coloca tus fotos en images/ o images/Doctorpics/ y recarga.</p>';
+        return;
+      }
+
+      // Crear slides
+      images.forEach(src => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.loading = 'lazy';
+        img.className = 'w-full h-96 object-cover rounded-xl shadow-lg';
+        slide.appendChild(img);
+        wrapper.appendChild(slide);
+      });
+
+      // Inicializar Swiper después de inyectar slides
+      // pequeña espera para asegurar layout antes de init
+      setTimeout(() => {
+        // Si ya hay una instancia, no crear duplicada (defensivo)
+        if (window.galeriaSwiper && typeof window.galeriaSwiper.destroy === 'function') {
+          window.galeriaSwiper.destroy(true, true);
+        }
+        window.galeriaSwiper = new Swiper('.galeriaSwiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: { delay: 3500, disableOnInteraction: false },
+          pagination: { el: '.swiper-pagination', clickable: true },
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+          breakpoints: { 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+        });
+      }, 100);
+    })();
+  </script>
+</section>
+
+
+
+    <!-- Foro / Blog simple -->
+    <section id="foro" class="mt-14">
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold text-sky-800">Foro & Consejos</h3>
+        <p class="text-sm text-gray-500">Artículos y preguntas frecuentes</p>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-5 rounded-xl shadow" data-aos="fade-up">
+          <h4 class="font-semibold">Cómo mantener un peso saludable</h4>
+          <p class="mt-2 text-sm text-gray-600">Consejos prácticos y seguimiento médico para alcanzar tus metas.</p>
+          <a href="#" class="mt-3 inline-block text-sky-600 text-sm">Leer más →</a>
+        </article>
+
+        <article class="bg-white p-5 rounded-xl shadow" data-aos="fade-up" data-aos-delay="80">
+          <h4 class="font-semibold">Importancia del chequeo anual</h4>
+          <p class="mt-2 text-sm text-gray-600">Prevención y detección temprana como claves para la salud.</p>
+          <a href="#" class="mt-3 inline-block text-sky-600 text-sm">Leer más →</a>
+        </article>
+
+        <article class="bg-white p-5 rounded-xl shadow" data-aos="fade-up" data-aos-delay="160">
+          <h4 class="font-semibold">Telemedicina: qué esperar</h4>
+          <p class="mt-2 text-sm text-gray-600">Recomendaciones para una consulta remota efectiva.</p>
+          <a href="#" class="mt-3 inline-block text-sky-600 text-sm">Leer más →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="mt-16 bg-white rounded-2xl p-6 shadow">
+      <div class="md:flex md:gap-6">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <h3 class="text-2xl font-bold text-sky-800">Contacto & Ubicación</h3>
+          <p class="text-sm text-gray-600 mt-2">Contáctanos para agendar tu cita o resolver dudas. También puedes visitarnos en Golden Plaza #3 en Añasco.</p>
+
+          <dl class="mt-4 text-sm text-gray-700 space-y-3">
+            <div>
+              <dt class="font-semibold">Teléfono</dt>
+              <dd><a href="tel:+19396996336" class="text-sky-600">+1 (939) 699-6336</a></dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Correo</dt>
+              <dd><a href="mailto:adalbertoechevarriamd@gmail.com" class="text-sky-600">adalbertoechevarriamd@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Dirección</dt>
+              <dd>Golden Plaza #3, Carretera 402 KM 2.1, Bo. Marías, Añasco, PR</dd>
+            </div>
+          </dl>
+
+          <div class="mt-4">
+            <!-- Simple embedded Google Maps (replace query to exact coordinates or use Google Maps API if preferred) -->
+            <iframe class="w-full h-44 rounded-lg border-0" src="https://www.google.com/maps?q=Golden+Plaza+A%C3%B1asco+Puerto+Rico&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form id="contactForm" class="mt-6 md:mt-0 md:w-1/2 bg-sky-50 p-5 rounded-lg" data-aos="fade-left" onsubmit="sendEmail(event)">
+          <h4 class="font-semibold">Enviar mensaje / Solicitar cita</h4>
+          <p class="text-sm text-gray-600 mb-3">Rellena tus datos y nos comunicaremos contigo.</p>
+
+          <label class="block text-sm">
+            <input id="name" name="name" required placeholder="Nombre completo" class="w-full p-3 rounded-md border border-sky-100" />
+          </label>
+
+          <label class="block text-sm mt-3">
+            <input id="email" name="email" type="email" required placeholder="Correo electrónico" class="w-full p-3 rounded-md border border-sky-100" />
+          </label>
+
+          <label class="block text-sm mt-3">
+            <input id="phone" name="phone" placeholder="Teléfono (opcional)" class="w-full p-3 rounded-md border border-sky-100" />
+          </label>
+
+          <label class="block text-sm mt-3">
+            <textarea id="message" name="message" rows="4" required placeholder="Mensaje o motivo de la cita" class="w-full p-3 rounded-md border border-sky-100"></textarea>
+          </label>
+
+          <div class="mt-4 flex items-center gap-3">
+            <button type="submit" class="bg-sky-600 text-white px-4 py-2 rounded-lg shadow">Enviar mensaje</button>
+            <button type="reset" class="text-sky-600 px-3 py-2 rounded-lg border border-sky-100">Limpiar</button>
+            <div id="formStatus" class="text-sm text-gray-600"></div>
+          </div>
+
+          <p class="mt-3 text-xs text-gray-500">Al enviar, aceptas que nos comuniquemos contigo por teléfono o correo para gestionar tu cita.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/19396996336?text=Hola%20Dr.%20Adalberto,%20quiero%20agendar%20una%20cita" target="_blank" aria-label="Contactar por WhatsApp">
+    <div class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 .13 5.243.13 11.87c0 2.085.546 4.14 1.58 5.95L0 24l6.44-1.68a11.86 11.86 0 005.56 1.42c6.627 0 11.87-5.243 11.87-11.87 0-3.17-1.23-6.13-3.35-8.37zM12 21.6a9.6 9.6 0 01-4.96-1.4l-.35-.21L4 20l1.4-2.67-.21-.35A9.6 9.6 0 0112 3.6c5.28 0 9.6 4.32 9.6 9.6S17.28 21.6 12 21.6zM16.2 15.6c-.33-.17-1.95-.95-2.25-1.06-.3-.12-.52-.17-.73.17-.21.33-.82 1.06-1.01 1.28-.19.21-.38.25-.71.08-.33-.17-1.39-.51-2.65-1.63-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.38.5-.57.17-.19.22-.33.33-.55.11-.21.05-.4-.02-.56-.08-.17-.73-1.77-1-2.42-.26-.63-.52-.54-.73-.55l-.62-.01c-.21 0-.55.08-.84.4-.3.33-1.15 1.12-1.15 2.73 0 1.61 1.18 3.17 1.34 3.39.17.22 2.33 3.6 5.65 4.98 3.31 1.38 3.31.92 3.9.86.58-.07 1.88-.76 2.15-1.5.27-.73.27-1.35.19-1.48-.08-.12-.3-.17-.63-.33z"/></svg>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-sky-900 text-white py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div>
+        <h4 class="font-bold">Clínica Dr. Adalberto Echevarría</h4>
+        <p class="text-sm mt-2">Golden Plaza #3, Carretera 402 KM 2.1, Bo. Marías, Añasco, PR</p>
+        <p class="text-sm mt-2">Tel: <a href="tel:+19396996336" class="underline">+1 (939) 699-6336</a></p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Enlaces rápidos</h4>
+        <ul class="mt-2 text-sm space-y-1">
+          <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+          <li><a href="#testimonios" class="hover:underline">Testimonios</a></li>
+          <li><a href="#foro" class="hover:underline">Foro</a></li>
+          <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Horario</h4>
+        <p class="text-sm mt-2">Lun — Vie: 8:00 — 17:00</p>
+        <p class="text-sm mt-2">Sáb: 8:00 — 12:00 (según disponibilidad)</p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-6 text-xs text-center text-white/80">
+      © <span id="anio"></span> Clínica del Dr. Adalberto Echevarría Feliciano — Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- EmailJS SDK (opcional) -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+
+  <script>
+    // Init AOS
+    AOS.init({ once: true });
+
+    // Init Swiper
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    // Year in footer
+    document.getElementById('anio').textContent = new Date().getFullYear();
+
+    /* ------------------------------
+       EmailJS: enviar formulario
+       - Reemplaza los placeholders:
+         emailjs.init('TU_USER_ID');
+         emailjs.send('TU_SERVICE_ID','TU_TEMPLATE_ID', { ... })
+       - O elimina todo el bloque si no usarás EmailJS.
+    ------------------------------- */
+    (function(){
+      // Opcional: inicializar EmailJS con tu user ID
+      // emailjs.init('TU_USER_ID'); // <-- reemplaza con tu user ID (public key)
+    })();
+
+    function sendEmail(e) {
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Enviando...';
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Si no usas EmailJS, puedes optar por enviar a tu backend aquí.
+      // EJEMPLO con EmailJS (descomenta y reemplaza IDs):
+      /*
+      emailjs.send('TU_SERVICE_ID','TU_TEMPLATE_ID', {
+        from_name: name,
+        from_email: email,
+        from_phone: phone,
+        message: message
+      }).then(function(response) {
+        status.textContent = 'Mensaje enviado. Gracias — nos comunicaremos pronto.';
+        document.getElementById('contactForm').reset();
+      }, function(error) {
+        status.textContent = 'Error al enviar. Intenta de nuevo o llama: +1 939-699-6336';
+      });
+      */
+
+      // Si no usarás EmailJS ahora, simulamos envío local:
+      setTimeout(() => {
+        status.textContent = 'Mensaje enviado (simulado). Reemplaza con EmailJS o tu endpoint.';
+        document.getElementById('contactForm').reset();
+      }, 800);
+    }
+  </script>
+
+  <!-- Nota: reemplaza imágenes y logos por los reales:
+       hero-consultorio.jpg, doctor-logo.png, dr-adalberto.jpg, enfermera.jpg, recepcionista.jpg,
+       logo-planvital.png, logo-triple-s.png, logo-mcs.png, avatar1.jpg, avatar2.jpg, avatar3.jpg
+  -->
+
+</body>
+</html>
